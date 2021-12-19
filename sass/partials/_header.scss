@@ -1,0 +1,104 @@
+@use 'colors'as c;
+@use 'mixins'as m;
+
+header {
+    width: 100%;
+    background-color: c.$secondary;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @include m.mq(mobile) {
+        flex-wrap: wrap;
+        padding: 1.2em 0;
+    }
+
+    @include m.mq(tablet) {
+        flex-wrap: nowrap;
+        padding: 1.2em;
+    }
+
+    a {
+        &.logo {
+            vertical-align: middle;
+            font-size: 1.4em;
+            font-weight: 600;
+            line-height: 1.6em;
+            text-align: center;
+            color: c.$primary;
+
+            @include m.mq(mobile) {
+                flex-basis: 100%;
+                padding: .2em;
+            }
+
+            @include m.mq(tablet) {
+                flex-basis: auto;
+                padding: 0;
+            }
+        }
+    }
+
+    ul {
+        &.nav {
+
+            @include m.mq(mobile) {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            @include m.mq(tablet) {
+                width: auto;
+                margin-left: auto;
+            }
+
+            li {
+                float: left;
+
+                @include m.mq(mobile) {
+                    width: 100%;
+                    padding-left: .5em;
+
+                    &:hover,
+                    &.active{
+                        background-color: c.$primary;
+
+                        a{
+                            color: c.$secondary;
+                        }
+                    }
+                }
+
+                @include m.mq(tablet) {
+                    width: auto;
+
+                    &:hover,
+                    &.active{
+                        background-color: transparent;
+
+                        a{
+                            color: c.$primary;
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 1.2em;
+                    font-weight: normal;
+                    color: black;
+
+                    @include m.mq(mobile) {
+                        padding: .5em 0;
+                        text-align: left;
+                    }
+
+                    @include m.mq(tablet) {
+                        padding: .5em .9em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

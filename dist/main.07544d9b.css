@@ -1,0 +1,146 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: purple;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  line-height: normal;
+  color: white;
+}
+
+*:before,
+*:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media (min-width: 320px) {
+  header {
+    flex-wrap: wrap;
+    padding: 1.2em 0;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 1.2em;
+  }
+}
+header a.logo {
+  vertical-align: middle;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.6em;
+  text-align: center;
+  color: purple;
+}
+@media (min-width: 320px) {
+  header a.logo {
+    flex-basis: 100%;
+    padding: 0.2em;
+  }
+}
+@media (min-width: 768px) {
+  header a.logo {
+    flex-basis: auto;
+    padding: 0;
+  }
+}
+@media (min-width: 320px) {
+  header ul.nav {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  header ul.nav {
+    width: auto;
+    margin-left: auto;
+  }
+}
+header ul.nav li {
+  float: left;
+}
+@media (min-width: 320px) {
+  header ul.nav li {
+    width: 100%;
+    padding-left: 0.5em;
+  }
+  header ul.nav li:hover, header ul.nav li.active {
+    background-color: purple;
+  }
+  header ul.nav li:hover a, header ul.nav li.active a {
+    color: white;
+  }
+}
+@media (min-width: 768px) {
+  header ul.nav li {
+    width: auto;
+  }
+  header ul.nav li:hover, header ul.nav li.active {
+    background-color: transparent;
+  }
+  header ul.nav li:hover a, header ul.nav li.active a {
+    color: purple;
+  }
+}
+header ul.nav li a {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: black;
+}
+@media (min-width: 320px) {
+  header ul.nav li a {
+    padding: 0.5em 0;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  header ul.nav li a {
+    padding: 0.5em 0.9em;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=/main.07544d9b.css.map */
